@@ -5,53 +5,67 @@
              Title="CONTADOR MANUAL "
              BackgroundColor="LightGray">
 
-    <VerticalStackLayout
-
-        Margin= "24">
-
-        <Label 
-            Text="CONTEO"
+    <Grid
+        Margin="16">
+        
+         <Grid.RowDefinitions>
             
-            FontSize="Medium"/>
-
-        <Border
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
             
-           Stroke="blue"
-           Margin="0,24,0,36" >
+         </Grid.RowDefinitions>
 
-
+        <VerticalStackLayout
+            
+               Grid.Row="0"
+               Margin="24">
+            
             <Label 
-                
-              Text="0"
-              HorizontalOptions="Center"
-              Margin="0,24"
-              FontSize="42"
-              FontAttributes="Bold" 
-              TextColor="Black"
-                
-              x:Name="ConteoLabel"
-             />  
-
-        </Border>
-
-        <HorizontalStackLayout
-           HorizontalOptions="Center"
-            Spacing="48">
-
-            <Button
-            Text="Contar"
+              Text="CONTEO"
               FontSize="Medium"
-                WidthRequest="130"
-                Clicked="Button_Clicked"/>
+             />
 
-            <Button
-            Text="Reiniciar"
-                FontSize="Medium"
-                WidthRequest="130"
-                Clicked="Button_Clicked_1"  />
+            <Border
+                Stroke="blue"
+                Margin="0,24,0,36">
+                
+               <Label 
+                Text="0"
+                HorizontalOptions="Center"
+                Margin="0,24"
+                FontSize="42"
+                FontAttributes="Bold" 
+                TextColor="Black" 
+                x:Name="ConteoLabel"
+                />
+                
+             </Border>
+            
+       </VerticalStackLayout>
+        
+        
+                <HorizontalStackLayout
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    HorizontalOptions="Center"
+                    Spacing="48">
+                    
+                    <Button
+                        Text="Contar"
+                        FontSize="Medium"
+                        WidthRequest="130"
+                        Clicked="Button_Clicked"
+                     />
 
-        </HorizontalStackLayout>
+                    <Button
+                      Text="Reiniciar"
+                      FontSize="Medium"
+                      WidthRequest="130"
+                      Clicked="Button_Clicked_1"
+                     />
 
-    </VerticalStackLayout>
+                </HorizontalStackLayout>
+    </Grid>
+
 
 </ContentPage>
